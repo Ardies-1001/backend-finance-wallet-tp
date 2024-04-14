@@ -23,3 +23,21 @@ import Route from '@ioc:Adonis/Core/Route'
 Route.get('/', async () => {
   return { hello: 'world' }
 })
+
+Route.group(() => {
+  // Authentification
+  Route.post('/auth/login', 'AuthController.login')
+  Route.post('/auth/register', 'AuthController.register')
+  Route.post('/auth/logout', 'AuthController.logout')
+
+  // Recharge
+  Route.resource( '/recharge', 'RechargesController').except(['create','edit'])
+  
+  // Dépense
+  Route.resource( '/depense', 'DepensesController').except(['create','edit'])
+
+  // // Commande
+  // Route.resource( '/order', 'OrdersController').except(['create','edit'])
+
+
+}).prefix('api')
