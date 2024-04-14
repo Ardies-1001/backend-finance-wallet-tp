@@ -1,7 +1,7 @@
 /*
-|--------------------------------------------------------------------------
+|-------------------------------------------------------------------------
 | Validating Environment Variables
-|--------------------------------------------------------------------------
+|-------------------------------------------------------------------------
 |
 | In this file we define the rules for validating environment variables.
 | By performing validation we ensure that your application is running in
